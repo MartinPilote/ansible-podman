@@ -1,0 +1,13 @@
+---
+- name: Enable Podman Service
+  systemd:
+    name: podman
+    state: started
+    enabled: yes
+
+- name: Enable Podman Auto-Update Service
+  systemd:
+    name: podman-auto-update.timer
+    state: started
+    enabled: yes
+...
